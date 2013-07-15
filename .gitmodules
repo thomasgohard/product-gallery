@@ -1,0 +1,3 @@
+[submodule "wet-boew-dist"]
+	path = wet-boew-dist
+	url = https://github.com/wet-boew/wet-boew-dist.git
