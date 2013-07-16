@@ -1,5 +1,7 @@
-.product-name {
-	background: transparent url(../images/icon.png) no-repeat;
-	padding-top: 23.05px;
-	padding-left: 52px;
+.product-icon {
+	width: 48px;
+	height: 48px;
+	padding-right: 3px;
+	padding-bottom: 3px;
+	float: left;
 }
