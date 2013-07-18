@@ -5,3 +5,7 @@
 	padding-bottom: 3px;
 	float: left;
 }
+
+.product-link {
+	text-decoration: none;
+}
