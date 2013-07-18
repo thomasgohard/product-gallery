@@ -6,6 +6,6 @@
 	float: left;
 }
 
-.product-link {
+.product-link, .product-link:hover, .product-link:focus {
 	text-decoration: none;
 }
