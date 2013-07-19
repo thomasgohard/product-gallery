@@ -6,6 +6,11 @@
 	float: left;
 }
 
+.product-image {
+	width: 320px;
+	height: 480px;
+}
+
 .product-link, .product-link:hover, .product-link:focus {
 	text-decoration: none;
 }
