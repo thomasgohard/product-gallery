@@ -1,0 +1,16 @@
+.product-icon {
+	width: 48px;
+	height: 48px;
+	padding-right: 3px;
+	padding-bottom: 3px;
+	float: left;
+}
+
+.product-image {
+	width: 240px;
+	height: 360px;
+}
+
+.product-link, .product-link:hover, .product-link:focus {
+	text-decoration: none;
+}
