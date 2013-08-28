@@ -69,8 +69,8 @@ wet-boew.github.io/wet-boew/License-eng.html / wet-boew.github.io/wet-boew/Licen
 <section class="font-large">
 	<h2 class="wb-invisible">Liste de [produits]</h2>
 	<table id="mobile-gallery" class="wet-boew-tables">
-		<thead>
-			<tr>
+		<thead class="product-data-hidden">
+			<!--<tr>
 				<th>ID</th>
 				<th>Nom</th>
 				<th>Icône</th>
@@ -80,6 +80,12 @@ wet-boew.github.io/wet-boew/License-eng.html / wet-boew.github.io/wet-boew/Licen
 				<th>Langue(s)</th>
 				<th>Ministère</th>
 				<th>Lien(s) de téléchargement</th>
+			</tr>-->
+			<tr>
+				<th>Icône</th>
+				<th>Nom</th>
+				<th>Platforme(s)</th>
+				<th>Description</th>
 			</tr>
 		<thead>
 		<tbody>
@@ -151,7 +157,29 @@ wet-boew.github.io/wet-boew/License-eng.html / wet-boew.github.io/wet-boew/Licen
 		$('#mobile-gallery').dataTable({
 			"bDestroy": true,
 			"bProcessing": true,
-			"sAjaxSource": 'data.json'
+			"sAjaxSource": 'data2.json',
+			"aoColumns": [
+				{
+					"mData": "ProductIcon",
+					"sClass": "product-icon"
+				},
+				{
+					"mData": "ProductName",
+					"sClass": "product-name"
+				},
+				{
+					"mData": "ProductPlatforms",
+					"sClass": "product-platforms"
+				},
+				{
+					"mData": "ProductDescription",
+					"sClass": "product-description"
+				}
+			],
+			"asStripeClasses": [],
+			"fnCreatedRow": function(row, data, index) {
+				row.className = "product-record module-info module-simplify span-4";
+			}
 		});
 	});
 </script>
