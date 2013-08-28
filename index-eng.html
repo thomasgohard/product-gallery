@@ -68,7 +68,7 @@ wet-boew.github.io/wet-boew/License-eng.html / wet-boew.github.io/wet-boew/Licen
 
 <section class="font-large">
 	<h2 class="wb-invisible">List of [products]</h2>
-	<table id="mobile-gallery" class="wet-boew-tables">
+	<table id="mobile-gallery" class="wet-boew-tables product-listing">
 		<thead class="product-data-hidden">
 			<!--<tr>
 				<th>ID</th>
@@ -157,28 +157,44 @@ wet-boew.github.io/wet-boew/License-eng.html / wet-boew.github.io/wet-boew/Licen
 		$('#mobile-gallery').dataTable({
 			"bDestroy": true,
 			"bProcessing": true,
+			"asStripeClasses": [],
 			"sAjaxSource": 'data2.json',
 			"aoColumns": [
 				{
 					"mData": "ProductIcon",
-					"sClass": "product-icon"
+					"sClass": "product-icon",
+					"sTitle": "Product icon"
 				},
 				{
 					"mData": "ProductName",
-					"sClass": "product-name"
+					"sClass": "product-name",
+					"sTitle": "Product name"
 				},
 				{
 					"mData": "ProductPlatforms",
-					"sClass": "product-platforms"
+					"sClass": "product-platforms",
+					"sTitle": "Platform(s)"
 				},
 				{
 					"mData": "ProductDescription",
-					"sClass": "product-description"
+					"sClass": "product-description",
+					"sTitle": "Description"
 				}
 			],
-			"asStripeClasses": [],
 			"fnCreatedRow": function(row, data, index) {
 				row.className = "product-record module-info module-simplify span-4";
+			},
+			"fnDrawCallback": function(settings) {
+				var rows = this.fnGetNodes();
+				if (rows.length > 0) {
+					/*for (var key in this) {
+						console.log("this." + key);
+					}*/
+					console.log(this.html());
+
+					var tbody = rows[0].parentNode;
+					var table = tbody.parentNode;
+				}
 			}
 		});
 	});

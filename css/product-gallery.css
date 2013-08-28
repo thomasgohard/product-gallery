@@ -3,6 +3,20 @@
 	visibility: hidden;
 }
 
+.product-listing {
+	display: block;
+}
+
+.product-record-group {
+	display: table;
+	table-layout: fixed;
+}
+
+.product-record {
+	position: relative;
+	display: table-cell;
+}
+
 .product-icon {
 	width: 48px;
 	height: 48px;
@@ -12,6 +26,10 @@
 }
 
 .product-name {
+	display: block;
+}
+
+.product-platforms {
 	display: block;
 }
 
