@@ -68,37 +68,23 @@ wet-boew.github.io/wet-boew/License-eng.html / wet-boew.github.io/wet-boew/Licen
 
 <section class="font-large">
 	<h2 class="wb-invisible">Liste de [produits]</h2>
-	<div class="span-2"><span class="product-count">N</span> <span class="product-label">produits</span> affichés</div>
-	<div class="float-right">
-		<ul class="button-group margin-top-none margin-buttom-none">
-			<li><a href="#" class="button button-accent">Rechercher</a></li>
-			<li><a href="#" class="button button-accent">Filtrer</a></li>
-			<li><a href="#" class="button button-accent">Ordonner</a></li>
-		</ul>
-	</div>
-	<div class="clear"></div>
-	<div class="equalize">
-		<div class="span-4 module-info module-simplify">
-			<a class="product-link" href="page-de-produit.html">
-				<section>
-					<h3><img class="product-icon image-actual" src="images/icon.png" />[Nom du produit]</h3>
-					<p><span class="badge-update font-medium">Web</span> <span class="badge-update font-medium">Android</span> <span class="badge-update font-medium">iOS</span> <span class="badge-update font-medium">Blackberry</span> <span class="badge-update font-medium">Windows</span></p>
-					<p>[Description du produit]</p>
-				</section>
-			</a>
-		</div>
-
-		<div class="span-4 module-info module-simplify">
-			<a class="product-link" href="page-de-produit.html">
-				<section>
-					<h3><img class="product-icon image-actual" src="images/icon.png" />[Nom du produit]</h3>
-					<p><span class="badge-update font-medium">Web</span> <span class="badge-update font-medium">Android</span> <span class="badge-update font-medium">iOS</span> <span class="badge-update font-medium">Blackberry</span> <span class="badge-update font-medium">Windows<//span></p>
-					<p>[Description du produit]</p>
-				</section>
-			</a>
-		</div>
-	</div>
-	<div class="clear"></div>
+	<table id="mobile-gallery" class="wet-boew-tables">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Nom</th>
+				<th>Icône</th>
+				<th>Description</th>
+				<th>Capture(s) d'écran</th>
+				<th>Platforme(s)</th>
+				<th>Langue(s)</th>
+				<th>Ministère</th>
+				<th>Lien(s) de téléchargement</th>
+			</tr>
+		<thead>
+		<tbody>
+		<tbody>
+	</table>
 </section>
 
 <dl id="wet-date-mod" role="contentinfo">
@@ -160,6 +146,14 @@ wet-boew.github.io/wet-boew/License-eng.html / wet-boew.github.io/wet-boew/Licen
 <!-- ScriptsEnd -->
 
 <!-- CustomScriptsStart -->
+<script>
+	$(document).ready(function() {
+		$('#mobile-gallery').dataTable({
+			"bProcessing": true,
+			"sAjaxSource": 'data.json'
+		});
+	});
+</script>
 <!-- CustomScriptsEnd -->
 </body>
 </html>
