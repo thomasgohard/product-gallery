@@ -158,25 +158,40 @@ wet-boew.github.io/wet-boew/License-eng.html / wet-boew.github.io/wet-boew/Licen
 			"bDestroy": true,
 			"bProcessing": true,
 			"asStripeClasses": [],
-			"sAjaxSource": 'data2.json',
+			"sAjaxSource": 'data-fr.json',
 			"aoColumns": [
 				{
-					"mData": "ProductIcon",
+					"mData": function(data, type, val) {
+						return "<img src=\"" + data["ProductIcon"] + "\" alt=\"\" />";
+					},
 					"sClass": "product-icon",
 					"sTitle": "Icône du produit"
 				},
 				{
-					"mData": "ProductName",
+					"mData": function(data, type, val) {
+						return data["ProductName"];
+					},
 					"sClass": "product-name",
 					"sTitle": "Nom du produit"
 				},
 				{
-					"mData": "ProductPlatforms",
+					"mData": function(data, type, val) {
+						var platform_badges = "";
+						var len = data["ProductPlatforms"].length;
+
+						for (var i = 0; i < len; ++i) {
+							platform_badges += " <span class=\"badge-update font-medium\">" + data["ProductPlatforms"][i] + "</span>";
+						}
+
+						return platform_badges;
+					},
 					"sClass": "product-platforms",
 					"sTitle": "Plate-forme(s)"
 				},
 				{
-					"mData": "ProductDescription",
+					"mData": function(data, type, val) {
+						return data["ProductDescription"].substr(0, data["ProductDescription"].indexOf(". "));
+					},
 					"sClass": "product-description",
 					"sTitle": "Description"
 				}
