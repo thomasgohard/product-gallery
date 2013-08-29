@@ -187,13 +187,17 @@ wet-boew.github.io/wet-boew/License-eng.html / wet-boew.github.io/wet-boew/Licen
 			"fnDrawCallback": function(settings) {
 				var rows = this.fnGetNodes();
 				if (rows.length > 0) {
-					/*for (var key in this) {
-						console.log("this." + key);
-					}*/
-					console.log(this.html());
-
 					var tbody = rows[0].parentNode;
-					var table = tbody.parentNode;
+					var tbody_attributes_list = $(tbody).prop("attributes");
+					var tbody_attributes_string = " class=\"product-record-group equalize\"";
+					
+					$.each(tbody_attributes_list, function() {
+						tbody_attributes_string += " " + this.name + "=\"" + this.value + "\"";
+					});
+
+					for (var i = 0; i < rows.length; i += 2) {
+						$(rows).slice(i, i + 2).wrapAll("<tbody " + tbody_attributes_string + "></tbody>");
+					}
 				}
 			}
 		});
