@@ -3,21 +3,21 @@ pe.document.one('wb-init-loaded', function() {
 		"bDestroy": true,
 		"bProcessing": true,
 		"asStripeClasses": [],
-		"sAjaxSource": 'data-' + pe.language + '.json',
+		"sAjaxSource": "data-" + pe.language + ".json",
 		"aoColumns": [
 			{
 				"mData": function(data, type, val) {
 					return "<img src=\"" + data["ProductIcon"] + "\" alt=\"\" />";
 				},
 				"sClass": "product-icon",
-				"sTitle": "Product icon"
+				//"sTitle": "Product icon"
 			},
 			{
 				"mData": function(data, type, val) {
 					return data["ProductName"];
 				},
 				"sClass": "product-name",
-				"sTitle": "Product name"
+				//"sTitle": "Product name"
 			},
 			{
 				"mData": function(data, type, val) {
@@ -31,14 +31,14 @@ pe.document.one('wb-init-loaded', function() {
 					return platform_badges;
 				},
 				"sClass": "product-platforms",
-				"sTitle": "Platform(s)"
+				//"sTitle": "Platform(s)"
 			},
 			{
 				"mData": function(data, type, val) {
 					return data["ProductDescription"].substr(0, data["ProductDescription"].indexOf(". "));
 				},
 				"sClass": "product-description",
-				"sTitle": "Description"
+				//"sTitle": "Description"
 			}
 		],
 		"fnCreatedRow": function(row, data, index) {
