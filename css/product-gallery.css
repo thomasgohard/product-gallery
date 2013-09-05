@@ -4,17 +4,17 @@
 }
 
 .product-listing {
-	display: block;
-}
-
-.product-record-group {
-	display: table;
-	table-layout: fixed;
+	width: 100%;
 }
 
 .product-record {
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 20px;
+	float: left;
 	position: relative;
-	display: table-cell;
+	min-width: 290px;
+	max-width: 460px;
 }
 
 .product-icon {
@@ -23,18 +23,22 @@
 	padding-right: 3px;
 	padding-bottom: 3px;
 	float: left;
+	border: none;
 }
 
 .product-name {
 	display: block;
+	border: none;
 }
 
 .product-platforms {
 	display: block;
+	border: none;
 }
 
 .product-description {
 	display: block;
+	border: none;
 }
 
 .product-image {
