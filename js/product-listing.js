@@ -2,6 +2,7 @@ pe.document.one('wb-init-loaded', function() {
 	$('#mobile-gallery').dataTable({
 		"bDestroy": true,
 		"bProcessing": true,
+		"bAutoWidth": false,
 		"asStripeClasses": [],
 		"sAjaxSource": "data-" + pe.language + ".json",
 		"aoColumns": [

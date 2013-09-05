@@ -4,17 +4,14 @@
 }
 
 .product-listing {
-	width: 100%;
+	display: block;
+	width: 100% !important;
 }
 
 .product-record {
-	margin-left: 10px;
-	margin-right: 10px;
+	display: inline-block;
 	margin-bottom: 20px;
-	float: left;
-	position: relative;
-	min-width: 290px;
-	max-width: 460px;
+	width: 100%;
 }
 
 .product-icon {
@@ -48,4 +45,18 @@
 
 .product-link, .product-link:hover, .product-link:focus {
 	text-decoration: none;
+}
+
+@media (min-width: 768px) {
+	.product-record {
+		max-width: 47.25%;
+		margin-right: 10px;
+		margin-left: 10px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.product-record {
+		max-width: 31.5%;
+	}
 }
