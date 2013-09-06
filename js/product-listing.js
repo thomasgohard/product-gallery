@@ -49,26 +49,31 @@ pe.document.one('wb-init-loaded', function() {
 			row.className = "product-record module-info module-simplify";
 		},
 		"fnDrawCallback": function(settings) {
+			var rows = this.fnGetNodes();
 			var mq768 = window.matchMedia("(min-width: 768px)");
 			//mq768.addListener(event_handler);
 			//event_handler(mq768);
 
-			if (mq768.matches) {
-				var rows = this.fnGetNodes();
+			if (rows.length !== 0 && mq768.matches) {
 				var recs_per_row = 2;
 
 				for (var i = 0, len = rows.length, minheight = 0; i < len; ++i) {
 					if (i % recs_per_row == 0) {
 						if (i !== 0) {
 							for (var j = i - 1; j >= i - recs_per_row; --j) {
-								rows[j].css({"min-height": minheight});
+								/*
+								 * Firefox: min-height includes padding in its calculations so the min-height must be set to minheight + padding-top + padding-bottom.
+								 * Must test to determine whether that is also true with other browsers.
+								 */
+								$(rows[j]).css({"min-height": minheight});
 							}
 						}
 
-						minheight = rows[i].height();
-					} else if (rows[i].height() > minheight) {
-						minheight = rows[i].height();
-					}
+						minheight = $(rows[i]).height();
+					} else if ($(rows[i]).height() > minheight) {
+						minheight = $(rows[i]).height();
+					
+}
 				}
 			}
 			/*$.getScript('./wet-boew-dist/dist/js/dependencies/equalheights-min.js', function(data, textStatus, jqxhr) {
