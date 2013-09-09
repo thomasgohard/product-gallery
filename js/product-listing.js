@@ -54,24 +54,17 @@ pe.document.one('wb-init-loaded', function() {
 					if (i % recs_per_row == 0) {
 						if (i !== 0) {
 							for (var j = i - 1; j >= i - recs_per_row; --j) {
-								/*
-								 * Firefox: min-height includes padding in its calculations so the min-height must be set to minheight + padding-top + padding-bottom.
-								 * Must test to determine whether that is also true with other browsers.
-								 */
 								$(rows[j]).css({"min-height": minheight});
 							}
 						}
 
-						minheight = $(rows[i]).height();
-					} else if ($(rows[i]).height() > minheight) {
-						minheight = $(rows[i]).height();
+						minheight = $(rows[i]).innerHeight();
+					} else if ($(rows[i]).innerHeight() > minheight) {
+						minheight = $(rows[i]).innerHeight();
 					
 }
 				}
 			}
-			/*$.getScript('./wet-boew-dist/dist/js/dependencies/equalheights-min.js', function(data, textStatus, jqxhr) {
-				$('#mobile-gallery tbody').equalHeights();
-			});*/
 		}
 	});
 });
