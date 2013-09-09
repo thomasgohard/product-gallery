@@ -8,14 +8,7 @@ pe.document.one('wb-init-loaded', function() {
 		"aoColumns": [
 			{
 				"mData": function(data, type, val) {
-					return "<img src=\"" + data["ProductIcon"] + "\" alt=\"\" />";
-				},
-				"sClass": "product-icon",
-				//"sTitle": "Product icon"
-			},
-			{
-				"mData": function(data, type, val) {
-					return data["ProductName"];
+					return "<img class=\"product-icon\" src=\"" + data["ProductIcon"] + "\" alt=\"\" />" + data["ProductName"];
 				},
 				"sClass": "product-name",
 				//"sTitle": "Product name"
