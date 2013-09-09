@@ -43,13 +43,19 @@ pe.document.one('wb-init-loaded', function() {
 		},
 		"fnDrawCallback": function(settings) {
 			var rows = this.fnGetNodes();
+			var recs_per_row = 1;
 			var mq768 = window.matchMedia("(min-width: 768px)");
+			var mq1200 = window.matchMedia("(min-width: 1200px)");
 			//mq768.addListener(event_handler);
 			//event_handler(mq768);
 
-			if (rows.length !== 0 && mq768.matches) {
-				var recs_per_row = 2;
+			if (mq1200.matches) {
+				recs_per_row = 3;
+			} else if (mq768.matches) {
+				recs_per_row = 2;
+			}
 
+			if (rows.length !== 0 && recs_per_row !== 1) {
 				for (var i = 0, len = rows.length, minheight = 0; i < len; ++i) {
 					if (i % recs_per_row == 0) {
 						if (i !== 0) {
