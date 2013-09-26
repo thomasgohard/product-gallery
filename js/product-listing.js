@@ -1,4 +1,6 @@
 pe.document.one('wb-init-loaded', function() {
+	var record_count = 0;
+
 	$('#mobile-gallery').dataTable({
 		"bDestroy": true,
 		"bProcessing": true,
@@ -40,6 +42,7 @@ pe.document.one('wb-init-loaded', function() {
 		],
 		"fnCreatedRow": function(row, data, index) {
 			row.className = "product-record module-info module-simplify";
+			row.id = "record-" + record_count++;
 		},
 		"fnDrawCallback": function(settings) {
 			var rows = this.fnGetNodes();
