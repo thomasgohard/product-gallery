@@ -33,9 +33,24 @@
 	border: none;
 }
 
+.product-shortdescription {
+	display: block;
+	border: none;
+}
+
 .product-description {
 	display: block;
 	border: none;
+	width: 70%;
+	float: right;
+}
+
+.product-department {
+	display: block;
+	border: none;
+	width: 30%;
+	margin-top: 10px;
+	margin-left: 10px;
 }
 
 .product-image {

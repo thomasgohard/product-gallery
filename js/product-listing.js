@@ -35,7 +35,7 @@ pe.document.one('wb-init-loaded', function() {
 					//return data["ProductDescription"].substr(0, data["ProductDescription"].indexOf(". "));
 					return data["ProductShortDescription"];
 				},
-				"sClass": "product-description",
+				"sClass": "product-shortdescription",
 				//"sTitle": "Description"
 			},
 			{
@@ -43,6 +43,13 @@ pe.document.one('wb-init-loaded', function() {
 					return data["ProductDescription"];
 				},
 				"sClass": "product-description",
+				//"sTitle": "Description"
+			},
+			{
+				"mData": function(data, type, val) {
+					return "Published by: " + data["ProductDepartment"];
+				},
+				"sClass": "product-department",
 				//"sTitle": "Description"
 			}
 		],
