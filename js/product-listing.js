@@ -37,6 +37,13 @@ pe.document.one('wb-init-loaded', function() {
 				},
 				"sClass": "product-description",
 				//"sTitle": "Description"
+			},
+			{
+				"mData": function(data, type, val) {
+					return data["ProductDescription"];
+				},
+				"sClass": "product-description",
+				//"sTitle": "Description"
 			}
 		],
 		"fnCreatedRow": function(row, data, index) {
