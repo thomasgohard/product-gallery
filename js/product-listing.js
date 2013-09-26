@@ -10,7 +10,7 @@ pe.document.one('wb-init-loaded', function() {
 		"aoColumns": [
 			{
 				"mData": function(data, type, val) {
-					return "<img class=\"product-icon\" src=\"" + data["ProductIcon"] + "\" alt=\"\" />" + data["ProductName"];
+					return "<a href=\"#record-" + data["ProductID"] + "\"><img class=\"product-icon\" src=\"" + data["ProductIcon"] + "\" alt=\"\" />" + data["ProductName"] + "</a>";
 				},
 				"sClass": "product-name",
 				//"sTitle": "Product name"
@@ -42,7 +42,8 @@ pe.document.one('wb-init-loaded', function() {
 		],
 		"fnCreatedRow": function(row, data, index) {
 			row.className = "product-record module-info module-simplify";
-			row.id = "record-" + record_count++;
+			//row.id = "record-" + record_count++;
+			row.id = "record-" + data["ProductID"]
 		},
 		"fnDrawCallback": function(settings) {
 			var rows = this.fnGetNodes();
