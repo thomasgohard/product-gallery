@@ -1,6 +1,4 @@
 pe.document.one('wb-init-loaded', function() {
-	var record_count = 0;
-
 	$('#mobile-gallery').dataTable({
 		"bDestroy": true,
 		"bProcessing": true,
@@ -34,7 +32,8 @@ pe.document.one('wb-init-loaded', function() {
 					/*
 					 * Bug: Assume that more than one sentence will be present in the product description.
 					 */
-					return data["ProductDescription"].substr(0, data["ProductDescription"].indexOf(". "));
+					//return data["ProductDescription"].substr(0, data["ProductDescription"].indexOf(". "));
+					return data["ProductShortDescription"];
 				},
 				"sClass": "product-description",
 				//"sTitle": "Description"
@@ -42,7 +41,6 @@ pe.document.one('wb-init-loaded', function() {
 		],
 		"fnCreatedRow": function(row, data, index) {
 			row.className = "product-record module-info module-simplify";
-			//row.id = "record-" + record_count++;
 			row.id = "record-" + data["ProductID"]
 		},
 		"fnDrawCallback": function(settings) {
