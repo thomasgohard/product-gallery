@@ -8,9 +8,9 @@ pe.document.one('wb-init-loaded', function() {
 		"aoColumns": [
 			{
 				"mData": function(data, type, val) {
-					return "<a href=\"#record-" + data["ProductID"] + "\"><img class=\"product-icon\" src=\"" + data["ProductIcon"] + "\" alt=\"\" />" + data["ProductName"] + "</a>";
+					return "<a href=\"#record-" + data["ProductID"] + "\"><img class=\"product-icon\" src=\"" + data["ProductIcon"] + "\" alt=\"\" />" + data["ProductName"] + "</a><a class=\"record-close\" href=\"#" + data["ProductID"] + "_0\">close</a>";
 				},
-				"sClass": "product-name",
+				"sClass": "product-name product-data-persistant",
 				//"sTitle": "Product name"
 			},
 			{
@@ -24,7 +24,7 @@ pe.document.one('wb-init-loaded', function() {
 
 					return platform_badges;
 				},
-				"sClass": "product-platforms",
+				"sClass": "product-platforms product-data-persistant",
 				//"sTitle": "Platform(s)"
 			},
 			{
@@ -35,21 +35,21 @@ pe.document.one('wb-init-loaded', function() {
 					//return data["ProductDescription"].substr(0, data["ProductDescription"].indexOf(". "));
 					return data["ProductShortDescription"];
 				},
-				"sClass": "product-shortdescription",
+				"sClass": "product-shortdescription product-data-compressed",
 				//"sTitle": "Description"
 			},
 			{
 				"mData": function(data, type, val) {
 					return data["ProductDescription"];
 				},
-				"sClass": "product-description",
+				"sClass": "product-description product-data-expanded",
 				//"sTitle": "Description"
 			},
 			{
 				"mData": function(data, type, val) {
 					return "Published by: " + data["ProductDepartment"];
 				},
-				"sClass": "product-department",
+				"sClass": "product-department product-data-expanded",
 				//"sTitle": "Description"
 			}
 		],

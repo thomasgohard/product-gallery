@@ -3,6 +3,33 @@
 	visibility: hidden;
 }
 
+/*.product-record:target {
+	display: block;
+	position: absolute;
+}*/
+
+.product-data-persistant {}
+
+.product-data-compressed {
+	display: block;
+	visibility: visible;
+}
+
+:target .product-data-compressed {
+	display: none;
+	visibility: hidden;
+}
+
+.product-data-expanded {
+	display: none !important;
+	visibility: hidden;
+}
+
+:target .product-data-expanded {
+	display: block !important;
+	visibility: visible;
+}
+
 .product-listing {
 	display: block;
 	width: 100% !important;
@@ -62,11 +89,26 @@
 	text-decoration: none;
 }
 
+.record-close {
+	display: none;
+	visibility: hidden;
+	float: right;
+}
+
+:target .record-close {
+	display: block;
+	visibility: visible;
+}
+
 @media (min-width: 768px) {
 	.product-record {
 		max-width: 47.25%;
 		margin-right: 10px;
 		margin-left: 10px;
+	}
+
+	.product-record:target {
+		max-width: 100%;
 	}
 }
 
