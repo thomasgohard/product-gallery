@@ -1,47 +1,36 @@
 <!DOCTYPE html>
-<!--[if IE 7]><html lang="en" class="no-js ie7"><![endif]-->
-<!--[if IE 8]><html lang="en" class="no-js ie8"><![endif]-->
+<!--[if IE 8]><html class="no-js ie8" lang="en"><![endif]-->
 <!--[if gt IE 8]><!-->
-<html lang="en" class="no-js">
+<html lang="en">
 <!--<![endif]-->
 <head>
-<meta charset="utf-8" />
+<meta charset="utf-8">
 <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
-wet-boew.github.io/wet-boew/License-eng.html / wet-boew.github.io/wet-boew/Licence-fra.html -->
+wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
 <title>[Product gallery name] &mdash; [Site name]</title>
-
-<link rel="shortcut icon" href="wet-boew-dist/dist/theme-wet-boew/images/favicon.ico" />
-<meta name="description" content="English description / Description en anglais" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-
-<!--[if lte IE 8]>
-<script src="wet-boew-dist/dist/js/jquery-ie.min.js"></script>
-<script src="wet-boew-dist/dist/js/polyfills/html5shiv-min.js"></script>
-<link rel="stylesheet" href="wet-boew-dist/dist/grids/css/util-ie-min.css" />
-<link rel="stylesheet" href="wet-boew-dist/dist/js/css/pe-ap-ie-min.css" />
-<link rel="stylesheet" href="wet-boew-dist/dist/theme-wet-boew/css/theme-ie-min.css" />
-<noscript><link rel="stylesheet" href="wet-boew-dist/dist/theme-wet-boew/css/theme-ns-ie-min.css" /></noscript>
+<link href="./images/favicon.ico" rel="shortcut icon">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<!-- Meta data -->
+<meta name="description" content="" />
+<!-- Meta data-->
+<link rel="stylesheet" href="dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="dist/css/base.min.css">
+<link rel="stylesheet" href="dist/css/theme.min.css">
+<!-- IE8 Support -->
+<!--[if IE 8]>
+<script src="dist/js/vapour-ie8.min.js"></script>
 <![endif]-->
-<!--[if gt IE 8]><!-->
-<script src="wet-boew-dist/dist/js/jquery.min.js"></script>
-<link rel="stylesheet" href="wet-boew-dist/dist/grids/css/util-min.css" />
-<link rel="stylesheet" href="wet-boew-dist/dist/js/css/pe-ap-min.css" />
-<link rel="stylesheet" href="wet-boew-dist/dist/theme-wet-boew/css/theme-min.css" />
-<noscript><link rel="stylesheet" href="wet-boew-dist/dist/theme-wet-boew/css/theme-ns-min.css" /></noscript>
-<!--<![endif]-->
-
 <!-- CustomCSSStart -->
 <link rel="stylesheet" href="css/product-gallery.css" />
 <!-- CustomCSSEnd -->
 </head>
 
-<body><div id="wb-body">
-<div id="wb-skip">
+<body vocab="http://schema.org/" typeof="WebPage">
 <ul id="wb-tphp">
-<li id="wb-skip1"><a href="#wb-cont">Skip to main content</a></li>
-<li id="wb-skip2"><a href="#wb-nav">Skip to footer</a></li>
+	<li class="wb-skip"><a class="wb-skip-link" href="#wb-cont">Skip to content</a></li>
+	<li class="wb-skip"><a class="wb-skip-link" href="#wb-nav">Skip to footer</a></li>
 </ul>
-</div>
+
 
 <div id="wb-head"><div id="wb-head-in"><header>
 <!-- HeaderStart -->
@@ -55,7 +44,7 @@ wet-boew.github.io/wet-boew/License-eng.html / wet-boew.github.io/wet-boew/Licen
 </div></section>
 
 <div id="wet-bnr" role="banner"><div id="wet-bnr-in">
-<div id="wet-title"><p id="wet-title-in"><a href="index-eng.html"><object data="wet-boew-dist/dist/theme-wet-boew/images/logo.svg" role="img" tabindex="-1" type="image/svg+xml"><img src="wet-boew-dist/dist/theme-wet-boew/images/logo.png" alt="" /></object> <span>Web Experience Toolkit&#160;(WET) <small>Collaborative open source project led by the Government of Canada</small></span></a></p></div>
+<div id="wet-title"><p id="wet-title-in"><a href="index-eng.html"><object data="dist/assets/logo.svg" role="img" tabindex="-1" type="image/svg+xml"></object> <span>Web Experience Toolkit&#160;(WET) <small>Collaborative open source project led by the Government of Canada</small></span></a></p></div>
 
 </div></div>
 <!-- HeaderEnd -->
@@ -68,7 +57,7 @@ wet-boew.github.io/wet-boew/License-eng.html / wet-boew.github.io/wet-boew/Licen
 
 <section class="font-large">
 	<h2 class="wb-invisible">List of [products]</h2>
-	<table id="mobile-gallery" class="wet-boew-tables product-listing">
+	<table id="mobile-gallery" class="product-listing" data-wet-boew="">
 		<thead class="product-data-hidden">
 			<!--<tr>
 				<th>ID</th>
@@ -136,19 +125,11 @@ wet-boew.github.io/wet-boew/License-eng.html / wet-boew.github.io/wet-boew/Licen
 </footer>
 </div></div></div>
 
-<!-- ScriptsStart -->
-<script src="wet-boew-dist/dist/js/settings.js"></script>
-<!--[if lte IE 8]>
-<script src="wet-boew-dist/dist/theme-wet-boew/js/theme-ie-min.js"></script>
-<script src="wet-boew-dist/dist/js/pe-ap-ie-min.js"></script>
-<script src="wet-boew-dist/dist/js/jquerymobile/jquery.mobile-ie.min.js"></script>
-<![endif]-->
-<!--[if gt IE 8]><!-->
-<script src="wet-boew-dist/dist/theme-wet-boew/js/theme-min.js"></script>
-<script src="wet-boew-dist/dist/js/pe-ap-min.js"></script>
-<!--<script src="wet-boew-dist/dist/js/jquerymobile/jquery.mobile.min.js"></script>-->
+<!--[if gte IE 9 | !IE ]><!-->
+<script src="dist/js/jquery.min.js"></script>
+<script src="dist/js/vapour.min.js"></script>
 <!--<![endif]-->
-<!-- ScriptsEnd -->
+<script src="dist/js/wet-boew.min.js"></script>
 
 <!-- CustomScriptsStart -->
 <script type="text/javascript" src="js/product-listing.js"></script>
