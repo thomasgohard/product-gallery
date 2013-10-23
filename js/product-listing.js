@@ -54,7 +54,7 @@ Modernizr.load( [{
 				}
 			],
 			"fnCreatedRow": function(row, data, index) {
-				row.className = "product-record module-info module-simplify";
+				row.className = "product-record well";
 				row.id = "record-" + data["ProductID"];
 			},
 			"fnDrawCallback": function(settings) {
