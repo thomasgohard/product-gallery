@@ -20,7 +20,7 @@ Modernizr.load( [{
 						var platform_badges = "";
 						var len = data["ProductPlatforms"].length;
 						for (var i = 0; i < len; ++i) {
-							platform_badges += " <span class=\"badge-update font-medium\">" + data["ProductPlatforms"][i] + "</span>";
+							platform_badges += " <span class=\"label label-default font-medium\">" + data["ProductPlatforms"][i] + "</span>";
 						}
 						return platform_badges;
 					},
