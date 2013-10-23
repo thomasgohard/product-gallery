@@ -5,8 +5,6 @@ Modernizr.load( [{
 			"bDestroy": true,
 			"bProcessing": true,
 			"bAutoWidth": false,
-			"aLengthMenu":[1,2,3,-1],
-			"iDisplayLength": 1,
 			"asStripeClasses": [],
 			"sAjaxSource": "data-" + document.documentElement.lang + ".json",
 			"aoColumns": [
