@@ -3,136 +3,164 @@
 <!--[if gt IE 8]><!-->
 <html lang="en">
 <!--<![endif]-->
-<head>
-<meta charset="utf-8">
-<!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
-wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
-<title>[Product gallery name] &mdash; [Site name]</title>
-<link href="./images/favicon.ico" rel="shortcut icon">
-<meta content="width=device-width, initial-scale=1" name="viewport">
-<!-- Meta data -->
-<meta name="description" content="" />
-<!-- Meta data-->
-<link rel="stylesheet" href="dist/css/bootstrap.min.css">
-<link rel="stylesheet" href="dist/css/base.min.css">
-<link rel="stylesheet" href="dist/css/theme.min.css">
-<!-- IE8 Support -->
-<!--[if IE 8]>
-<script src="dist/js/vapour-ie8.min.js"></script>
-<![endif]-->
-<!-- CustomCSSStart -->
-<link rel="stylesheet" href="css/product-gallery.css" />
-<!-- CustomCSSEnd -->
-</head>
+	<head>
+		<meta charset="utf-8">
+		<!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
+		wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
+		<title>[Product gallery name] &mdash; [Site name]</title>
+		<link href="dist/images/favicon.ico" rel="shortcut icon">
+		<meta content="width=device-width, initial-scale=1" name="viewport">
+		<!-- Meta data -->
+		<meta name="description" content="" />
+		<!-- Meta data-->
+		<link rel="stylesheet" href="dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="dist/css/base.min.css">
+		<link rel="stylesheet" href="dist/css/theme.min.css">
 
-<body vocab="http://schema.org/" typeof="WebPage">
-<ul id="wb-tphp">
-	<li class="wb-slc"><a class="wb-sl" href="#wb-cont">Skip to content</a></li>
-	<li class="wb-slc"><a class="wb-sl" href="#wb-nav">Skip to footer</a></li>
-</ul>
+		<!-- IE8 Support -->
+		<!--[if IE 8]>
+		<script src="dist/js/vapour-ie8.min.js"></script>
+		<![endif]-->
 
+		<!-- CustomCSSStart -->
+		<link rel="stylesheet" href="css/product-gallery.css" />
+		<!-- CustomCSSEnd -->
+	</head>
+	<body vocab="http://schema.org/" typeof="WebPage">
+		<ul id="wb-tphp">
+			<li class="wb-slc">
+				<a class="wb-sl" href="#wb-cont">Skip to content</a>
+			</li>
+			<li class="wb-slc">
+				<a class="wb-sl" href="#wb-nav">Skip to footer</a>
+			</li>
+		</ul>
+		<header role="banner">
+			<div id="wb-banner">
+				<section id="wb-lang">
+					<h2>Language selection</h2>
+					<div class="container">
+						<div class="row text-right">
+							<ul data-ajax-before="dist/js/assets/mobmenu-en.html" class="visible-md visible-lg">
+								<li><a lang="fr" href="index-fr.html">Français</a></li>
+								<li class="current">English&#32;<span>(current)</span></li>
+							</ul>
+						</div>
+					</div>
+				</section>
 
-<div id="wb-head"><div id="wb-head-in"><header>
-<!-- HeaderStart -->
-<section><div id="wet-fullhd"><h2>Header bar</h2>
-<div id="wet-fullhd-in">
-<ul>
-<li id="wet-fullhd-lang"><a href="index-fr.html" lang="fr">Français</a></li>
-<li id="wet-fullhd-lang-current">English</li>
-</ul>
-</div>
-</div></section>
+				<div class="container">
+					<div class="row">
+						<section id="wb-sitetitle" class="col-md-8">
+							<a href="index-en.html"><object type="image/svg+xml" tabindex="-1" role="img" data="dist/assets/logo.svg" aria-label=""></object><span>Web Experience Toolkit&#160;(WET) <small>Collaborative open source project led by the Government of Canada</small></span></a>
+						</section>
+					</div>
+				</div>
+			</div>
+		</header>
 
-<div id="wet-bnr" role="banner"><div id="wet-bnr-in">
-<div id="wet-title"><p id="wet-title-in"><a href="index-en.html"><object data="dist/assets/logo.svg" role="img" tabindex="-1" type="image/svg+xml"></object> <span>Web Experience Toolkit&#160;(WET) <small>Collaborative open source project led by the Government of Canada</small></span></a></p></div>
+		<main role="main" property="mainContentOfPage" class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h1 id="wb-cont" property="name" class="margin-top-xlarge">[Product gallery name]</h1>
 
-</div></div>
-<!-- HeaderEnd -->
-</header></div></div>
+					<section class="font-large">
+						<h2 class="wb-invisible">List of [products]</h2>
+						<table id="mobile-gallery" class="product-listing">
+							<thead class="product-data-hidden">
+								<!--<tr>
+									<th>ID</th>
+									<th>Name</th>
+									<th>Icon</th>
+									<th>Description</th>
+									<th>Screenshot(s)</th>
+									<th>Platform(s)</th>
+									<th>Language(s)</th>
+									<th>Department</th>
+									<th>Download link(s)</th>
+								</tr>-->
+								<tr>
+									<th>Name</th>
+									<th>Platform(s)</th>
+									<th>Description</th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</section>
+				</div>
+			</div>
+		</main>
 
-<div id="wb-core"><div id="wb-core-in" class="equalize">
-<div id="wb-main" role="main"><div id="wb-main-in">
-<!-- MainContentStart -->
-<h1 id="wb-cont" class="margin-top-xlarge">[Product gallery name]</h1>
+		<footer role="contentinfo" id="wb-nav">
+			<nav role="navigation">
+				<h2>Site Information</h2>
+				<div class="container">
+					<div class="row">
+						<section class="col-sm-3 col-lg-3">
+							<h3>About us</h3>
+							<ul class="list-unstyled">
+								<li>
+									<a href="#">Our Mandate</a>
+								</li>
+								<li>
+									<a href="#">Our history</a>
+								</li>
+							</ul>
+						</section>
+						<section class="col-sm-3 col-lg-3">
+							<h3>Contact us</h3>
+							<ul>
+								<li>
+									<a href="#">Phone numbers</a>
+								</li>
+								<li>
+									<a href="#">Office locations</a>
+								</li>
+							</ul>
+						</section>
+						<section class="col-sm-3 col-lg-3">
+							<h3>News</h3>
+							<ul>
+								<li>
+									<a href="#">News releases</a>
+								</li>
+								<li>
+									<a href="#">Media advisories</a>
+								</li>
+								<li>
+									<a href="#">Multimedia</a>
+								</li>
+							</ul>
+						</section>
+						<section class="col-sm-3 col-lg-3">
+							<h3>Stay connected</h3>
+							<ul>
+								<li>
+									<a rel="external" href="#">YouTube</a>
+								</li>
+								<li>
+									<a rel="external" href="#">Twitter</a>
+								</li>
+								<li>
+									<a href="#">Feeds</a>
+								</li>
+							</ul>
+						</section>
+					</div>
+				</div>
+			</nav>
+		</footer>
 
-<section class="font-large">
-	<h2 class="wb-invisible">List of [products]</h2>
-	<table id="mobile-gallery" class="product-listing">
-		<thead class="product-data-hidden">
-			<!--<tr>
-				<th>ID</th>
-				<th>Name</th>
-				<th>Icon</th>
-				<th>Description</th>
-				<th>Screenshot(s)</th>
-				<th>Platform(s)</th>
-				<th>Language(s)</th>
-				<th>Department</th>
-				<th>Download link(s)</th>
-			</tr>-->
-			<tr>
-				<th>Name</th>
-				<th>Platform(s)</th>
-				<th>Description</th>
-			</tr>
-		</thead>
-		<tbody>
-		</tbody>
-	</table>
-</section>
+		<!--[if gte IE 9 | !IE ]><!-->
+		<script src="dist/js/jquery.min.js"></script>
+		<script src="dist/js/vapour.min.js"></script>
+		<!--<![endif]-->
+		<script src="dist/js/wet-boew.min.js"></script>
 
-<dl id="wet-date-mod" role="contentinfo">
-<dt>Date modified:</dt><dd><span><time>2013-06-25</time></span></dd>
-</dl>
-<div class="clear"></div>
-<!-- MainContentEnd -->
-</div></div>
-</div></div>
-
-<div id="wb-foot"><div id="wb-foot-in"><footer><h2 id="wb-nav">Footer</h2>
-<!-- FooterStart -->
-<nav role="navigation"><div id="wet-sft"><h3>Site footer</h3><div id="wet-sft-in">
-<section><div class="span-2"><h4 class="wet-col-head"><a href="#">About us</a></h4>
-<ul>
-<li><a href="#">Our Mandate</a></li>
-<li><a href="#">Our history</a></li>
-</ul>
-</div></section>
-<section><div class="span-2"><h4 class="wet-col-head"><a href="#">Contact us</a></h4>
-<address>
-<ul>
-<li><a href="#">Phone numbers</a></li>
-<li><a href="#">Office locations</a></li>
-</ul>
-</address>
-</div></section>
-<section><div class="span-2"><h4 class="wet-col-head"><a href="#">News</a></h4>
-<ul>
-<li><a href="#">News releases</a></li>
-<li><a href="#">Media advisories</a></li>
-<li><a href="#">Multimedia</a></li>
-</ul>
-</div></section>
-<section><div class="span-2"><h4 class="wet-col-head"><a href="#">Stay connected</a></h4>
-<ul>
-<li><a rel="external" href="#">YouTube</a></li>
-<li><a rel="external" href="#">Twitter</a></li>
-<li><a href="#">Feeds</a></li>
-</ul>
-</div></section>
-</div></div></nav>
-<!-- FooterEnd -->
-</footer>
-</div></div></div>
-
-<!--[if gte IE 9 | !IE ]><!-->
-<script src="dist/js/jquery.min.js"></script>
-<script src="dist/js/vapour.min.js"></script>
-<!--<![endif]-->
-<script src="dist/js/wet-boew.min.js"></script>
-
-<!-- CustomScriptsStart -->
-<script type="text/javascript" src="js/product-listing.js"></script>
-<!-- CustomScriptsEnd -->
-</body>
+		<!-- CustomScriptsStart -->
+		<script type="text/javascript" src="js/product-listing.js"></script>
+		<!-- CustomScriptsEnd -->
+	</body>
 </html>
