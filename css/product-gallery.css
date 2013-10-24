@@ -100,6 +100,21 @@
 	visibility: visible;
 }
 
+.od-lnk {
+	display: block;
+	margin-top: 2em;
+	text-align: center;
+}
+
+.dataTables_wrapper:before, .dataTables_wrapper:after {
+	content: " ";
+	display: table;
+}
+
+.dataTables_wrapper:after {
+	clear: both;
+}
+
 @media (min-width: 768px) {
 	.product-record {
 		max-width: 47.25%;
