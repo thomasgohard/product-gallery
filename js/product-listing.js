@@ -56,33 +56,6 @@ Modernizr.load( [{
 			"fnCreatedRow": function(row, data, index) {
 				row.className = "product-record well";
 				row.id = "record-" + data["ProductID"];
-			},
-			"fnDrawCallback": function(settings) {
-				var rows = this.fnGetNodes();
-				var recs_per_row = 1;
-				var mq768 = window.matchMedia("(min-width: 768px)");
-				var mq1200 = window.matchMedia("(min-width: 1200px)");
-				//mq768.addListener(event_handler);
-				//event_handler(mq768);
-				if (mq1200.matches) {
-					recs_per_row = 3;
-				} else if (mq768.matches) {
-					recs_per_row = 2;
-				}
-				if (rows.length !== 0 && recs_per_row !== 1) {
-					for (var i = 0, len = rows.length, minheight = 0; i < len; ++i) {
-						if (i % recs_per_row === 0) {
-							if (i !== 0) {
-								for (var j = i - 1; j >= i - recs_per_row; --j) {
-									$(rows[j]).css({"min-height": minheight});
-								}
-							}
-							minheight = $(rows[i]).innerHeight();
-						} else if ($(rows[i]).innerHeight() > minheight) {
-							minheight = $(rows[i]).innerHeight();
-						}
-					}
-				}
 			}
 		})
 	}
