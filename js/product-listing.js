@@ -58,6 +58,7 @@ Modernizr.load( [{
 				row.id = "record-" + data["ProductID"];
 			}
 		})
+		$('#mobile-gallery').dataTable().fnSortListener (document.getElementById('btnNameSort'), 0);
 	}
 }]);
 
