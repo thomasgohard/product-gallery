@@ -3,11 +3,6 @@
 	visibility: hidden;
 }
 
-/*.product-record:target {
-	display: block;
-	position: absolute;
-}*/
-
 .product-data-persistant {}
 
 .product-data-compressed {
@@ -41,6 +36,10 @@
 	width: 100%;
 }
 
+.product-record:target {
+	height: auto !important;
+}
+
 .product-icon {
 	width: 48px;
 	height: 48px;
@@ -63,6 +62,7 @@
 .product-shortdescription {
 	display: block;
 	border: none;
+	margin-top: 1em;
 }
 
 .product-description {
@@ -117,7 +117,7 @@
 
 @media (min-width: 768px) {
 	.product-record {
-		max-width: 47.25%;
+		max-width: 47%;
 		margin-right: 10px;
 		margin-left: 10px;
 	}
