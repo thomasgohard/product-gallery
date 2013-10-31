@@ -40,7 +40,7 @@ Modernizr.load( [{
 				},
 				{
 					"mData": function(data, type, val) {
-						return data["ProductDescription"];
+						return data["ProductLongDescription"];
 					},
 					"sClass": "product-description product-data-expanded"
 					//"sTitle": "Description"
